@@ -12,8 +12,6 @@ pnpm-debug.log*
 
 # Env files
 .env
-.env.*
-!.env.example  # 👈 subes un ejemplo vacío
 
 # IDE/OS
 .vscode/
