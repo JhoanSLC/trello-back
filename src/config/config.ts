@@ -14,6 +14,7 @@ const dbPort = process.env.DB_PORT ? parseInt(process.env.DB_PORT) : 3306;
 
 export const config = {
     JWT: process.env.JWT_SECRET,
+    JWT_EXPIRES_IN: process.env.JWT_EXPIRES_IN || '1d',
     PORT: process.env.PORT || 3000,
     CLIENT_URL: process.env.CLIENT_URL,
     NODE_ENV: process.env.NODE_ENV || 'development',

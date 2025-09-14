@@ -14,7 +14,7 @@ const s3Client = new S3Client({
     },
 })
 
-export const urlBucket = (): string => `https://${config.aws.BUCKET}.s3.amazonaws.com/`
+export const urlBucket = (): string => `https://${config.aws.BUCKET}.s3.us-east-2.amazonaws.com/`
 
 interface UploadResponse {
     path: string;

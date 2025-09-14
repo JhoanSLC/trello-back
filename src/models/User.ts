@@ -48,6 +48,10 @@ export class User extends Model {
     @Column(DataType.TINYINT.UNSIGNED)
     status!: number
 
+    @AllowNull(true)
+    @Column(DataType.STRING(100))
+    photo?: string
+
     @ForeignKey(() => User)
     @AllowNull(true)
     @Column(DataType.MEDIUMINT.UNSIGNED)

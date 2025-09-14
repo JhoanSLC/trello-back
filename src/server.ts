@@ -5,6 +5,7 @@ import morgan from 'morgan'
 import { config } from "./config/config";
 import { notFoundMiddleware } from "./middlewares/NotFoundMiddleware";
 import { connectDb } from "./config/database";
+import routes from './routes'
 
 const APP = express();
 const PORT = config.PORT || 3000;
@@ -20,6 +21,8 @@ APP.use(cookieParser());
 
 APP.use(morgan('dev'));
 APP.use("/storage", express.static(config.STORAGE));
+
+APP.use("/api", routes)
 
 APP.use(notFoundMiddleware);
 

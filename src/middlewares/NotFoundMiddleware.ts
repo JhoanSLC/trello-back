@@ -5,7 +5,7 @@ import { Request, Response, NextFunction } from "express"
  */
 export const notFoundMiddleware = (req: Request, res: Response, next: NextFunction) => {
     res.status(404).json({
-        error: "Ruta no encontrada",
-        message: `La ruta '${req.originalUrl}' no existe en este servidor.`
+        error: "Route not found",
+        message: `Route '${req.originalUrl}' does not exist on this server. `
     })
 }
